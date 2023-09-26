@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.DotnetToolCLI", "Template.DotnetToolCLI\Template.DotnetToolCLI.csproj", "{B3FF33A2-4183-41B3-A79E-FB57C47905DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3FF33A2-4183-41B3-A79E-FB57C47905DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3FF33A2-4183-41B3-A79E-FB57C47905DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3FF33A2-4183-41B3-A79E-FB57C47905DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3FF33A2-4183-41B3-A79E-FB57C47905DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8C1C28C-780A-4788-A3C5-27CCC96F5E77}
+	EndGlobalSection
+EndGlobal
