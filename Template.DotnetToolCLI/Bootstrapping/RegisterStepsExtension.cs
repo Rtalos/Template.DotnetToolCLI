@@ -10,9 +10,8 @@ namespace Template.DotnetToolCLI.Bootstrapping
         {
             services.AddSingleton<DialogContext>();
             services.AddSingleton<IConsoleHandler, ConsoleHandler>();
-            services.AddSingleton<IStepFactory, StepFactory>();
-            services.AddSingleton<CreateDialogContextStep>().AddSingleton<IStep, CreateDialogContextStep>(s => s.GetRequiredService<CreateDialogContextStep>());
-            services.AddSingleton<RunPowershellStep>().AddSingleton<IStep, RunPowershellStep>(s => s.GetRequiredService<RunPowershellStep>());
+            services.AddSingleton<IStep, CreateDialogContextStep>();
+            services.AddSingleton<IStep, RunPowershellStep>();
         }
     }
 }

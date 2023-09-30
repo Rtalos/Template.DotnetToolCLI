@@ -24,27 +24,18 @@ namespace Template.DotnetToolCLI.Steps
 
             using (var ps = PowerShell.Create())
             {
-                ps.AddStatement().AddScript(CommandLine); ;
-
-                ps.Streams.Error.DataAdded += (sender, eventargs) =>
-                {
-                    PSDataCollection<ErrorRecord> errorRecords = (PSDataCollection<ErrorRecord>)sender;
-                    _consoleHandler.WriteLine("Something errored");
-                };
+                ps.AddStatement().AddScript(CommandLine);
 
                 ps.Streams.Information.DataAdded += (sender, eventargs) =>
                 {
+                    if (sender is null)
+                        return;
+
                     PSDataCollection<InformationRecord> infoRecords = (PSDataCollection<InformationRecord>)sender;
                     _consoleHandler.WriteLine(infoRecords[eventargs.Index].ToString());
                 };
 
                 var result = await ps.InvokeAsync();
-
-                if (!ps.HadErrors)
-                {
-                    _consoleHandler.PrintOutput(result);
-                    _consoleHandler.WriteLineSuccessfulStepHighlight("Powershellt step successful!");
-                }
 
                 return new StepResult(ps);
             }
